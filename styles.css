@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+#head {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    background-color: red;
+}
+
+#nav {
+    padding: 15px;
+}
+
+#nav-list li{
+    display: inline;
+    margin: 0 20px;
+}
+
+#logo-img {
+    height: 55px;
+}
+
+.nav-item i {
+    border: ;
+}

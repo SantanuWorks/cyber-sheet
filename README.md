@@ -1,4 +1,4 @@
-Author: Santanu
+Author: Santanu\n
 About: I'm Santanu Pradhan, Software Engineer at Zessta. 
 Project: CyberSheet
 Description: A Sheet Website for DSA and System Design whhich is a inspiration from Striver's TUF and Aditya Pratap's AlgoMaster. Idea is to provide an interactive user interface.

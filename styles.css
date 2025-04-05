@@ -10,8 +10,17 @@ li {
     list-style-type: none;
 }
 
+/* Dark-Light Mode Styles */
+body.dark-mode {
+    background-color: #1b1b1b;
+    color: white;
+}
+
 body {
     height: 100vh;
+    color: #1b1b1b;
+    background-color: white;
+    transition: all 500ms;
 }
 
 /* Header Section Styles */
@@ -52,7 +61,6 @@ body {
 }
 
 #dark-light-toggle {
-    /* color: #fab005; */
     color: #ffaa00;
 }
 
@@ -62,18 +70,15 @@ body {
     height: 15px;
     width: 15px;
     border: 1px solid whitesmoke;
-    /* background-color: white; */
     background-color: #1b1b1b;
     padding: 10px;
 }
 
 .nav-item i:hover {
-    /* border: 1px solid #d55959;
-    background-color: #d55959; */
     background-color: black;
     color: white;
     cursor: pointer;
-    transition: all 700ms;
+    transition: all 500ms;
 }
 
 /* Content Section Styles */
@@ -90,17 +95,12 @@ body {
 
 #sidebar {
     width: 330px;
-    /* border-right: 1px solid gray; */
 }
 
 #sidebar-title {
     margin-bottom: 20px;
     color: #d55959;
 }
-
-/* #content-list {
-    overflow-y: scroll;
-} */
 
 #sidebar::-webkit-scrollbar {
     width: 15px;
@@ -134,20 +134,4 @@ body {
 
 #data {
     width: 100%;
-}
-
-
-/* Dark-Light Mode Styles */
-.light-mode {
-    background-color: #fcfcfc;
-    /* background-color: black; */
-    color: #1b1b1b;
-    transition: all 500ms;
-}
-
-.dark-mode {
-    background-color: #1b1b1b;
-    /* background-color: black; */
-    color: white;
-    transition: all 500ms;
 }

@@ -8,23 +8,18 @@
     <link rel="icon" type="image/x-icon" href="/res/favicon-retro.ico">
     <link rel="stylesheet" href="styles.css">
     <script>
-        // Self-executing function to set theme immediately
         (function() {
-            // Create a style element to prevent flash
             var antiFlashStyle = document.createElement('style');
             antiFlashStyle.textContent = 'body { visibility: hidden; }';
             document.head.appendChild(antiFlashStyle);
 
-            // Check for saved theme
             var savedTheme = localStorage.getItem('theme');
             var html = document.documentElement;
             
-            // Apply theme if found
             if (savedTheme === 'dark') {
                 html.classList.add('dark-mode');
             }
-            
-            // Remove the hiding style after slight delay
+        
             setTimeout(function() {
                 antiFlashStyle.remove();
                 document.body.style.visibility = 'visible';

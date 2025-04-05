@@ -52,7 +52,8 @@ body {
 }
 
 #dark-light-toggle {
-    color: #fab005;
+    /* color: #fab005; */
+    color: #ffaa00;
 }
 
 .nav-item i {
@@ -61,15 +62,18 @@ body {
     height: 15px;
     width: 15px;
     border: 1px solid whitesmoke;
-    background-color: white;
+    /* background-color: white; */
+    background-color: #1b1b1b;
     padding: 10px;
 }
 
 .nav-item i:hover {
-    border: 1px solid #d55959;
-    background-color: #d55959;
+    /* border: 1px solid #d55959;
+    background-color: #d55959; */
+    background-color: black;
     color: white;
     cursor: pointer;
+    transition: all 700ms;
 }
 
 /* Content Section Styles */
@@ -133,9 +137,17 @@ body {
 }
 
 
-/* Dark Mode Styles */
+/* Dark-Light Mode Styles */
+.light-mode {
+    background-color: #fcfcfc;
+    /* background-color: black; */
+    color: #1b1b1b;
+    transition: all 500ms;
+}
 
 .dark-mode {
-    background-color: black;
+    background-color: #1b1b1b;
+    /* background-color: black; */
     color: white;
+    transition: all 500ms;
 }

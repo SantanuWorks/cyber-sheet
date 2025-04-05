@@ -18,6 +18,8 @@ body.dark-mode {
 
 body {
     height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     color: #1b1b1b;
     background-color: white;
     transition: all 500ms;
@@ -29,7 +31,6 @@ body {
     justify-content: space-between;
     padding: 7px 15px;
     border-bottom: 1px solid rgb(175, 175, 175);
-    height: 75px;
 }
 
 #logo {
@@ -40,7 +41,7 @@ body {
 }
 
 #logo-img {
-    height: 70px;
+    height: 60px;
 }
 
 #nav {
@@ -73,7 +74,6 @@ body {
 .nav-item i:hover {
     background-color: #ffe1a6;
     border: 1px solid #ffe1a6;
-    /* background-color: black; */
     color: #ff8c00;
     cursor: pointer;
     transition: all 500ms;
@@ -109,21 +109,25 @@ body {
 #content {
     padding: 20px;
     display: flex;
-    height: 83vh;
+    overflow: hidden;
+    flex: 1;
 }
 
 #sidebar, #data {
     padding: 20px;
-    overflow-y: auto;
 }
 
 #sidebar {
     width: 330px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
 }
 
 #sidebar-title {
-    margin-bottom: 20px;
     color: #d55959;
+    flex-shrink: 0;
 }
 
 #sidebar::-webkit-scrollbar {
@@ -141,6 +145,10 @@ body {
     border: 3px solid transparent;
     background-clip: content-box;
     background-color: #d55959;
+}
+
+#content-list {
+    flex: 1;
 }
 
 #content-list li {

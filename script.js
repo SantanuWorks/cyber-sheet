@@ -35,3 +35,40 @@ themeToggle.addEventListener('click', function() {
         applyTheme('dark');
     }
 });
+
+
+// Open/Close Sublists 
+// Store the opned sublists, to avoid closing when reloads 
+document.addEventListener('DOMContentLoaded', function() {
+    const listItems = document.querySelectorAll('.list-item');
+    const STORAGE_KEY = 'savedSubListIds';
+
+    loadOpenedLists();
+
+    listItems.forEach(item => {
+        const listHeader = item.querySelector('.list-header');
+        listHeader.addEventListener('click', () => {
+            item.classList.toggle('open');
+            saveOpenedLists(item.dataset.listId);
+        });
+    });
+
+    function saveOpenedLists() {
+        const openIds = Array.from(document.querySelectorAll('.list-item.open')).map(function(item) {
+            return item.dataset.listId;
+        });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(openIds));
+    }
+
+    function loadOpenedLists() {
+        const savedState = localStorage.getItem(STORAGE_KEY);
+        if(savedState) {
+            const openIds = JSON.parse(savedState);
+            listItems.forEach(item => {
+                if(openIds.includes(item.dataset.listId)) {
+                    item.classList.add('open');
+                }
+            });
+        }
+    }
+});

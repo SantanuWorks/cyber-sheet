@@ -12,14 +12,11 @@
             var antiFlashStyle = document.createElement('style');
             antiFlashStyle.textContent = 'body { visibility: hidden; }';
             document.head.appendChild(antiFlashStyle);
-
             var savedTheme = localStorage.getItem('theme');
             var html = document.documentElement;
-            
             if (savedTheme === 'dark') {
                 html.classList.add('dark-mode');
             }
-        
             setTimeout(function() {
                 antiFlashStyle.remove();
                 document.body.style.visibility = 'visible';
@@ -47,38 +44,42 @@
         <aside id="sidebar">
             <h1 id="sidebar-title">DSA Patterns</h1>
             <ul id="content-list">
-                <li>Array</li>
-                <li>Bit Manipulation</li>
-                <li>Bit Manipulation</li>
-                <li>Bit Manipulation</li>
-                <li>Bit Manipulation</li>
-                <li>Bit Manipulation</li>
-                <li>Stack</li>
-                <li>Queue</li>
-                <li>Queue</li>
-                <li>Tree</li>
-                <li>Linked List</li>
-                <li>Tree</li>
-                <li>Tree</li>
-                <li>Tree</li>
-                <li>Queue</li>
-                <li>Queue</li>
-                <li>Tree</li>
-                <li>Linked List</li>
-                <li>Linked List</li>
-                <li>Linked List</li>
-                <li>Linked List</li>
-                <li>Linked List</li>
-                <li>Tree</li>
-                <li>Tree</li>
-                <li>Tree</li>
-                <li>Tree</li>
-                <li>Tree</li>
-                <li>Graph</li>
+                <li class="list-item" data-list-id="programming">
+                    <div class="list-header">Programming Languages</div>
+                    <ul class="sublist">
+                        <li class="sublist-item">JavaScript</li>
+                        <li class="sublist-item">Python</li>
+                        <li class="sublist-item">Java</li>
+                        <li class="sublist-item">C#</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="content-list">
+                <li class="list-item" data-list-id="databases">
+                    <div class="list-header">Databases</div>
+                    <ul class="sublist">
+                        <li class="sublist-item">Oracle</li>
+                        <li class="sublist-item">MySQL</li>
+                        <li class="sublist-item">PostgreSQL</li>
+                        <li class="sublist-item">MongoDB</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="content-list">
+                <li class="list-item" data-list-id="fronted">
+                    <div class="list-header">Frontend Tools</div>
+                    <ul class="sublist">
+                        <li class="sublist-item">HTML</li>
+                        <li class="sublist-item">CSS</li>
+                        <li class="sublist-item">JS</li>
+                        <li class="sublist-item">React.Js</li>
+                        <li class="sublist-item">Angular.Js</li>
+                        <li class="sublist-item">Vue.Js</li>
+                    </ul>
+                </li>
             </ul>
         </aside>
         <main id="data">
-            
         </main>
     </section>
     <script src="script.js"></script>

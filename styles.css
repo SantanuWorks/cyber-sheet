@@ -164,6 +164,39 @@ body {
     cursor: pointer;
 }
 
+/* Sublisting Styles */
+#content-list > li {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+#content-list > li > div {
+    display: block;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#content-list ul li:hover {
+    background-color: #8b2a2a;
+}
+
+.sublist {
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 10px;
+    transition: max-height 0.3s ease-out;
+}
+
+.sublist li {
+    margin-top: 15px;
+}
+
+.list-item.open .sublist {
+    max-height: 500px;
+    transition: max-height 0.3s ease-in;
+}
+
 #data {
     width: 100%;
 }
